@@ -8,60 +8,98 @@
 }
 
 body {
-  background-color:  black;
+  background-color: black;
+  /*background-color: #212121;*/
+  color: white;
+  /*background-image: url("../img/homeImage.jpg");
+  min-height: 100vh;
+  background-size:     cover;
+  background-position: center center;*/
+}
+
+.navPadding {
+  padding-top: 30px;
 }
 
 .container {
+  /*box-shadow: 10px 10px black;*/
+  /*margin: auto;*/
+  /*width: 60%;*/
+  /*min-height: 100vh;*/
+  /*background-image: url("../img/homeImage.jpg");*/
+  /*background-size:     cover;*/
+  /*background-position: center center;*/
+}
+.container2 {
   margin: auto;
-  width: 75%;
+  width: 90%;
+}
+.container3 {
+  margin: auto;
+  width: 90%;
 }
 
-.logo {
-  padding-top: 20px;
+.listMargin {
+  margin-left: 20px;
 }
+.logo {
+  /*padding-top: 30px;*/
+}
+#slogan {
+  display: none;
+  }
 
 .slogan {
-  padding-top: 10px;
+  /*padding-top: 10px;*/
+}
+
+/*These entries are for the project articles on the All Projects page.  Also handle the hover properties.*/
+.imgSize {
+  width: 100%;
+  /*opacity: 0;*/
+}
+
+.aBox img {
+  transition: 1s ease-in;
+}
+.overlay {
+  /*display: none;*/
+  opacity: 0;
+  visibility: hidden;
+  transition: 1.5s ease-in;
+}
+
+.aBox:hover img {
+  opacity: 0.2;
+}
+
+.aBox:hover .overlay {
+  display: inherit;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-250px);
+}
+
+.nav li a {
+  background-color: orange;
+  color: white;
+  font-size: 125%;
+}
+.nav li a:hover {
+  background-color: #3cb24d;
+  color: white;
+}
+.large {
+  width: 100%;
+  margin: auto;
 }
 
 h3 {
   color: white;
-  font-size: 350%;
+  font-size: 320%;
   text-align: right;
   font-family: 'Cabin', sans-serif;
-}
-
-.social {
-  font-family: sans-serif;
-  padding-top: 10px;
- }
-
-.top li {
-  display: inline;
-  padding: 20px 30px;
-}
-
-.large img {
-  width: 100%;
-  height: 80%;
-}
-
-h2 {
-  color: black;
-  text-align: center;
-  font-size: 230%;
-}
-
-p {
-  color: black;
-  font-size: 130%;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  display: inline-block;
-  font-size: 130%;
+  margin-top: 0px;
 }
 
 .flex-container {
@@ -72,61 +110,55 @@ a {
   width: 100%;
   height: 400px;
   padding-top: 20px;
+  color: black;
 }
 
 .flex-item {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  background-color: #94e7a2;
+  /*background-color: #94e7a2;*/
   font-family: sans-serif;
-  font-size: 85%;
+  font-size: 100%;
+  /*font-weight: bold;*/
   width: 250px;
   padding-left: 15px;
+  text-align: center;
 }
 
 .blue{
-  background-color:#3cb24d;
+  background-color: skyblue;
   height: 20px;
-  width: 220px;
-  padding-top: 20px;
-  border-radius: 50px;
+  /*width: 100%;*/
+  /*padding-top: 20px;*/
+  border-radius: 10px;
 }
 
 .orange{
   background-color:#ff9900;
   height: 20px;
-  width: 220px;
-  padding-top: 20px;
-  border-radius: 50px;
+  /*width: 100%;*/
+  /*padding-top: 20px;*/
+  border-radius: 10px;
 }
 
 .teal {
   background-color:#3cb24d;
   height: 20px;
-  width: 220px;
-  padding-top: 20px;
-  border-radius: 50px;
+  /*width: 100%;*/
+  /*padding-top: 20px;*/
+  border-radius: 10px;
 }
 
-.links {
-    position: relative;
-    display: inline-block;
-    float: left;
-    font-family: sans-serif;
-    padding: 25px;
-}
-
-.links li {
-    display: inline;
-    padding: 25px 80px;
-  }
+.social {
+  font-family: sans-serif;
+  /*font-size: 120%;*/
+  text-align: center;
+  /*padding-top: 10px;*/
+ }
 
 .fa {
-    padding: 15px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
+    padding: 20px;
     margin: 10px 10px;
     transition: all 1s ease-in-out;
     transform: scale(1);
@@ -135,12 +167,15 @@ a {
 
 .fa:hover {
       transition: all 200ms ease-in;
-      transform: scale(1.5);
+      transform: scale(1.2);
+      text-decoration: none;
+      color: white;
   }
 
 .fa-facebook {
     background: #3B5998;
     color: white;
+    /*text-decoration: none;*/
   }
 
 .fa-twitter {
@@ -159,53 +194,79 @@ a {
   }
 
 .fa-youtube {
-    background: #bb0000;
-    color: white;
+  background: #bb0000;
+  color: white;
   }
 
 .fa-instagram {
-    background: #125688;
-    color: white;
+  background: #125688;
+  color: white;
   }
 
-.google {
+/*For the footer section*/
+.links {
   position: relative;
-  left: 45%;
-  padding-top: 10px;
+  display: inline-block;
+  float: left;
+  font-family: sans-serif;
+  padding: 25px;
 }
 
+.links li {
+  display: inline;
+  padding: 25px 80px;
+  text-decoration: none;
+  }
+.links a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 130%;
+}
+.links a:hover {
+  text-decoration: none;
+  color: orange;
+ }
 
+/*media queries to handle resizing*/
 @media (max-width: 850px) {
 
   .flex-container{
-    background-color: #00ff00;
+    /*background-color: #00ff00;*/
     flex-direction: column;
-    height: 1200px;
+    height: 100vh;
     text-align: center;
     margin: auto;
   }
 
   .flex-item {
-    background-color: #00ff00;
-    height: 1200px;
+    /*background-color: #00ff00;*/
+    /*height: 500px;*/
     text-align: center;
     margin: auto;
  }
 
   p, h2 {
-    color: White;
+    /*color: White;*/
 }
 }
 
-@media (max-width: 360px) {
+/*Layout for tablet sized devices 768-991 width and larger*/
+@media (min-width: 768px) {
+  #logo {
+    display: inline;
+  }
 
-.logo {
-  display: none;
+  .large {
+    display: inline;
+  }
 }
-.slogan {
-  display: none;
-}
-.large {
-  display: none;
-}
+
+/*Layout for slightly larger desktops*/
+/*Created this custom width break to avoid slogan slide under logo*/
+@media (min-width: 1270px) {
+  #slogan {
+    display: inline;
+  }
+
 }
